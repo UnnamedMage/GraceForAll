@@ -1,0 +1,12 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "GraceForAll"
+version = "1.0.0"
+description = "None"
+authors = [{ name = "Izacar Alvarez", email = "zerel.eclipse@gmail.com" }]
+
+[tool.setuptools]
+packages = ["src"]

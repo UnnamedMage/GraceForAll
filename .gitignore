@@ -1,0 +1,15 @@
+# Builds
+build/
+GraceForAll.egg-info/
+
+
+# Binaries
+*.exe
+
+# Python
+__pycache__/
+.env
+
+# OS
+.DS_Store
+Thumbs.db
