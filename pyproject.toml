@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "GraceForAll"
-version = "1.0.0"
+version = "1.1.0"
 description = "None"
 authors = [{ name = "Izacar Alvarez", email = "zerel.eclipse@gmail.com" }]
 

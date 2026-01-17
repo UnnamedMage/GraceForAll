@@ -1,0 +1,261 @@
+QMainWindow{
+  background-color: {{secondaryLightColor}};
+}
+
+QFrame#dialog{
+  background-color: {{secondaryLightColor}};
+}
+
+QFrame#popup{
+  background-color: {{secondaryLightColor}};
+  border: {{2 | density()}}px solid {{primaryColor}};
+}
+
+QScrollArea,
+QGroupBox,
+QFrame {
+  background-color: transparent;
+}
+
+QGroupBox,
+QFrame #box {
+  background-color: {{secondaryDarkColor}};
+  border: {{2 | density()}}px solid {{secondaryColor}};
+  border-radius: {{5 | density()}}px;
+}
+
+QGroupBox,
+QFrame #square {
+  background-color: transparent;
+  border: {{2 | density()}}px solid {{secondaryColor}};
+  border-radius: {{2 | density()}}px;
+}
+
+QGroupBox,
+QFrame #bar {
+  background-color: {{primaryColor}};
+  border-color: qlineargradient(
+    x1: 0, y1: 0,
+    x2: 0, y2: 1,
+    stop: 0 {{primaryColor}},
+    stop: 1 {{secondaryTextColor}}
+);
+  border-width: 0 0 2px 0;
+  border-style: solid;
+}
+
+QTableView,
+QLineEdit,
+QTextEdit,
+QListView,
+QComboBox {
+  background-color: {{secondaryDarkColor}};
+  color: {{primaryTextColor}};
+  border-radius: {{2 | density()}}px;
+  border: {{1 | density()}}px solid {{secondaryColor}};
+}
+
+QLineEdit:focus,
+QTextEdit:focus {
+  border: {{1 | density()}}px solid {{secondaryColor}};
+}
+
+QLineEdit:hover,
+QTextEdit:hover {
+  border: {{2 | density()}}px solid {{primaryColor}};
+}
+
+QToolButton {
+  border: none;
+  color: {{secondaryLightColor}};
+  background-color: {{primaryColor}};
+  border-radius: {{2 | density()}}px;
+}
+
+QToolButton:checked{
+  background-color: {{primaryColor | darker(180)}};
+  border: {{2 | density()}}px solid {{secondaryLightColor}};
+}
+
+QToolButton:pressed {
+  border: {{2 | density()}}px solid {{secondaryLightColor}};
+}
+
+QToolButton:hover {
+  background-color: {{primaryLightColor}};
+}
+
+QToolButton:disabled {
+  background-color: grey;
+}
+
+QToolButton#cancel  {
+  color: {{primaryTextColor}};
+  background-color: {{secondaryLightColor}};
+  border: none;
+}
+
+QToolButton#cancel:checked,
+QToolButton#cancel:pressed {
+  background-color: {{primaryLightColor}};
+}
+
+QToolButton#cancel:hover {
+  border: {{1 | density()}}px solid {{primaryTextColor}};
+} 
+
+QTextBrowser,
+QLabel {
+  border: none;
+  background: transparent;
+  color: {{primaryTextColor}}
+}
+
+QLabel#bar {
+  border: none;
+  background: transparent;
+  color: {{secondaryLightColor}}
+}
+
+QLabel#sub_text {
+  border: none;
+  background: transparent;
+  color: {{secondaryTextColor}}
+}
+
+QTextBrowser:hover{
+  border: none;
+}
+
+QTextBrowser:focus{
+  border: none;
+}
+
+QScrollBar:horizontal {
+  border: 0;
+  background: {{secondaryColor|opacity(0.5)}};
+  height: {{14 | density()}}px;
+}
+
+QScrollBar:vertical {
+  border: 0;
+  background: {{secondaryColor|opacity(0.5)}};
+  width: {{14 | density()}}px;
+}
+
+QScrollBar::handle {
+  background: {{primaryColor|opacity(0.5)}};
+}
+
+QScrollBar::handle:horizontal {
+  min-width: {{24 | density()}}px;
+}
+
+QScrollBar::handle:vertical {
+  min-height: {{24 | density()}}px;
+}
+
+QScrollBar::handle:vertical:hover,
+QScrollBar::handle:horizontal:hover {
+  background: {{primaryColor}};
+}
+
+QScrollBar::add-line:vertical,
+QScrollBar::sub-line:vertical,
+QScrollBar::add-line:horizontal,
+QScrollBar::sub-line:horizontal {
+  border: 0;
+  background: transparent;
+  width: 0px;
+  height: 0px;
+}
+
+QScrollBar::sub-page:horizontal,
+QScrollBar::add-page:horizontal,
+QScrollBar::sub-page:vertical,
+QScrollBar::add-page:vertical,
+QScrolLBar:vertical {
+    background: transparent;
+}
+
+QSlider::groove:horizontal {
+  height: 14px;
+  background: transparent;
+  margin: 0 4px;
+}
+
+QSlider::groove:vertical {
+  width: 14px;
+  background: transparent;
+  margin: 4px 0;
+}
+
+QSlider::handle:horizontal {
+  background: {{primaryColor}};
+  border-radius: 8px;
+  width: 20px;
+  height: 14px;
+  margin: -4px -4px;
+}
+
+QSlider::handle:vertical {
+  background: {{primaryColor}};
+  border-radius: 7px;
+  width: 14px;
+  height: 20px;
+  margin: -4px -4px;
+}
+
+QSlider::add-page {
+background: {{primaryColor|opacity(0.3)}};
+}
+
+QSlider::sub-page {
+background: {{primaryColor}};
+}
+
+QDateEdit::drop-down,
+QComboBox::drop-down {
+  border: 2px solid transparent;
+  color: {{primaryColor}};
+  width: 15px;
+}
+
+QDateEdit::down-arrow,
+QComboBox::down-arrow {
+  color: {{primaryColor}};
+  image: url(assets/icons/down{{primaryTextColor}}.svg);
+}
+
+QListWidget {
+ padding-left: 5px;
+ padding-right: 0;
+}
+
+QListWidget::item,
+QTableView::item {
+  background-color: {{secondaryLightColor}};
+  selection-background-color: {{secondaryLightColor}};
+  border: none;
+}
+
+QTableView::item:selected:active,
+QListWidget::item:selected:active {
+  background-color: {{primaryColor}};
+}
+
+QListWidget::item:selected,
+QTableView::item:selected {
+  background-color: {{primaryLightColor}};
+  selection-background-color: {{primaryLightColor}};
+  color: {{secondaryTextColor}};
+  selection-color: {{secondaryTextColor}};
+}
+
+QListWidget::item:selected:focus,
+QTableView::item:selected:focus {
+  background-color: {{primaryColor}};
+  selection-background-color: {{primaryColor}};
+  color: {{primaryTextColor}};
+  selection-color: {{primaryTextColor}};
+}

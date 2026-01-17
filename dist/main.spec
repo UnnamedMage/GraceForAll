@@ -25,11 +25,11 @@ a = Analysis(
     
     # Datos a incluir (formato: (origen, destino_en_el_ejecutable))
     datas=[
-        (str(project_path / 'assets' / 'icons'), 'icons'),
-        (str(project_path / 'src' / 'components'), 'components'),
-        (str(project_path / 'src' / 'views'), 'views'),
+        (str(project_path / 'src' / 'ui'), 'ui'),
+        (str(project_path / 'src' / 'Qtive'), 'Qtive'),
         (str(project_path / 'src' / 'core'), 'core'),
-        (str(project_path / 'src' / 'services'), 'services'),
+        (str(project_path / 'src' / 'common'), 'common'),
+        (str(project_path / 'assets'), 'assets')
     ],
     
     hiddenimports=[],
@@ -62,5 +62,5 @@ exe = EXE(
     target_arch=None,
     codesign_identity=None,
     entitlements_file=None,
-    icon=str(project_path / 'assets' / 'design' / 'GraceForAll.ico'),
+    icon=str(project_path / 'assets' / 'design' /'GraceForAll.ico'),
 )
